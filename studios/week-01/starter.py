@@ -14,6 +14,8 @@ it watches the cipher's confidentiality guarantee COLLAPSE the instant the
 plaintext is English — because English leaks its letter statistics through any
 substitution. Naming that assumption is naming the attack (Kerckhoffs, week 1).
 """
+import random
+
 from cipher import (ALPHABET, ENGLISH_FREQ, apply_guess, letter_counts, score)
 
 
@@ -36,8 +38,9 @@ def frequency_guess_key(ciphertext):
         letters, commonest first.
       - ``zip`` the two rankings.
     """
-    # TODO: build and return the frequency-rank decryption map.
-    raise NotImplementedError
+    cipher_ranks = [symbol for symbol, _ in letter_counts(ciphertext).most_common()]
+    english_ranks = sorted(ENGLISH_FREQ, key=ENGLISH_FREQ.get, reverse=True)
+    return dict(zip(cipher_ranks, english_ranks))
 
 
 def crack(ciphertext, restarts=8, iters=3000, seed=0):
@@ -65,8 +68,29 @@ def crack(ciphertext, restarts=8, iters=3000, seed=0):
     NOTE: nothing in this function may reference the true key or the plaintext.
     The only inputs are the ciphertext and the public ``score`` / ``ENGLISH_FREQ``.
     """
-    # TODO: implement the random-restart hill climb described above.
-    raise NotImplementedError
+    rng = random.Random(seed)
+    best_overall, best_key_overall = None, None
+    for _ in range(restarts):
+        key = frequency_guess_key(ciphertext)
+        used_plaintext_letters = set(key.values())
+        unused_plaintext_letters = [l for l in ALPHABET if l not in used_plaintext_letters]
+        for symbol in ALPHABET:
+            if symbol not in key:
+                key[symbol] = rng.choice(unused_plaintext_letters)
+                unused_plaintext_letters.remove(key[symbol])
+        current_score = score(apply_guess(ciphertext, key))
+        for _ in range(iters):
+            a, b = rng.sample(ALPHABET, 2)
+            key[a], key[b] = key[b], key[a]
+            new_score = score(apply_guess(ciphertext, key))
+            if new_score > current_score:
+                current_score = new_score
+            else:
+                key[a], key[b] = key[b], key[a]
+        if best_overall is None or current_score > best_overall:
+            best_overall = current_score
+            best_key_overall = key.copy()
+    return best_key_overall
 
 
 # ---- Task: defeat your own attack (analysis, no test) -----------------------
