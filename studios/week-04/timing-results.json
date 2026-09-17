@@ -1,0 +1,61 @@
+{
+  "python": "3.14.0",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "secrets": [
+    "a53c",
+    "00ff",
+    "7e81"
+  ],
+  "insecure_comparison": [
+    {
+      "rounds": 1,
+      "recovered": [
+        "a53c",
+        "00ff",
+        "7e81"
+      ],
+      "successes": 3,
+      "attempts": 3
+    },
+    {
+      "rounds": 5,
+      "recovered": [
+        "a53c",
+        "00ff",
+        "7e81"
+      ],
+      "successes": 3,
+      "attempts": 3
+    },
+    {
+      "rounds": 11,
+      "recovered": [
+        "a53c",
+        "00ff",
+        "7e81"
+      ],
+      "successes": 3,
+      "attempts": 3
+    },
+    {
+      "rounds": 41,
+      "recovered": [
+        "a53c",
+        "00ff",
+        "7e81"
+      ],
+      "successes": 3,
+      "attempts": 3
+    }
+  ],
+  "fixed_comparison": {
+    "rounds": 41,
+    "recovered": [
+      "5000",
+      "0800",
+      "0200"
+    ],
+    "successes": 0,
+    "attempts": 3
+  }
+}
