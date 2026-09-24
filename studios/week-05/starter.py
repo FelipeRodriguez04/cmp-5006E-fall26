@@ -21,8 +21,7 @@ from dh_pki import DH_P, DH_G, make_cert, validate, verify, load_fixtures
 
 def dh_public(private, g=DH_G, p=DH_P):
     """Alice/Bob's public value: g^private mod p, sent over the wire."""
-    # TODO: return pow(g, private, p)
-    raise NotImplementedError
+    return pow(g, private, p)
 
 
 def dh_shared(their_public, my_private, p=DH_P):
@@ -32,8 +31,7 @@ def dh_shared(their_public, my_private, p=DH_P):
     same g^(ab) mod p. DH's guarantee: an eavesdropper who saw only the two
     public values cannot compute it (discrete-log assumption).
     """
-    # TODO: return pow(their_public, my_private, p)
-    raise NotImplementedError
+    return pow(their_public, my_private, p)
 
 
 def mitm_keys(a, b, m, g=DH_G, p=DH_P):
@@ -54,14 +52,22 @@ def mitm_keys(a, b, m, g=DH_G, p=DH_P):
 
     Use ``dh_public`` and ``dh_shared`` — do not call ``pow`` directly here.
     """
-    # TODO:
-    #   A = dh_public(a); B = dh_public(b); M = dh_public(m)
-    #   Alice, seeing M (she thinks it's Bob), computes dh_shared(M, a)
-    #   Mallory, seeing A, computes dh_shared(A, m)  -> same key as Alice
-    #   Bob,   seeing M (he thinks it's Alice), computes dh_shared(M, b)
-    #   Mallory, seeing B, computes dh_shared(B, m)  -> same key as Bob
-    #   alice_equals_bob = (Alice's key == Bob's key)
-    raise NotImplementedError
+    alice_public = dh_public(a, g, p)
+    bob_public = dh_public(b, g, p)
+    mallory_public = dh_public(m, g, p)
+
+    alice_key = dh_shared(mallory_public, a, p)
+    mallory_alice_key = dh_shared(alice_public, m, p)
+    bob_key = dh_shared(mallory_public, b, p)
+    mallory_bob_key = dh_shared(bob_public, m, p)
+
+    return {
+        "alice": alice_key,
+        "mallory_alice": mallory_alice_key,
+        "bob": bob_key,
+        "mallory_bob": mallory_bob_key,
+        "alice_equals_bob": alice_key == bob_key,
+    }
 
 
 # ---- Task 3: the trust-store attack -----------------------------------------
@@ -75,8 +81,9 @@ def poison_trust_store(trust_store, rogue_root):
     any chain terminating in the rogue root validates — the DigiNotar failure
     mode in miniature.
     """
-    # TODO: return a new set = trust_store plus rogue_root["pub"]
-    raise NotImplementedError
+    poisoned = set(trust_store)
+    poisoned.add(rogue_root["pub"])
+    return poisoned
 
 
 # ---- Task 2 uses the GIVEN validator; nothing to implement there ------------

@@ -1,0 +1,7 @@
+# Week 5 — Control Scorecard (axis 2)
+
+| Mechanism | Guarantee and condition | Evidence and failure |
+|---|---|---|
+| Diffie–Hellman | Alice and Bob derive the same secret against a passive observer **if** they use each other's authentic public values and keep their private exponents secret. | `test_dh_direct_agreement_is_secret_and_shared` confirms agreement. `test_mitm_breaks_unauthenticated_dh` shows that an active attacker can substitute public values: Mallory shares a separate key with each party. Raw DH does not authenticate the peer. |
+| Certificate chain | A public key is bound to the claimed name **if** the signatures validate up to a correctly maintained, trusted root and that authority issued the certificate to the rightful subject. | The legitimate chain validates; the self-signed and rogue-CA chains fail at the trust anchor. `test_trust_store_poisoning_accepts_forgery` shows that adding Mallory's root makes the rogue chain validate, even though the signatures themselves still work. |
+| TLS 1.3 | The channel protects confidentiality and authenticates its peer **if** certificate validation identifies the intended endpoint, DH secrets remain secret, and AEAD keys and nonces are used correctly. | The DH MITM and trust-store poisoning tests show two ways an underlying condition can fail. As discussed in week 3, nonce reuse under one key can also destroy the encryption guarantee. The studio does not implement or test TLS itself. |
