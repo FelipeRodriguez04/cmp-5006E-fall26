@@ -27,12 +27,14 @@ import urllib.request
 from http.server import ThreadingHTTPServer
 from pathlib import Path
 
-from seclab.scan import ScanResult
-
 # --- locate the course root (the dir that contains ``seclab/``) --------------
 ROOT = Path(__file__).resolve()
 while ROOT != ROOT.parent and not (ROOT / "seclab").is_dir():
     ROOT = ROOT.parent
+sys.path.insert(0, str(ROOT))
+
+from seclab.scan import ScanResult  # noqa: E402 (requires the course root)
+
 APP_DIR = ROOT / "labs" / "vuln-web" / "app"
 GROUND_TRUTH_FILE = ROOT / "projects" / "duel-2-web" / "ground_truth.json"
 sys.path.insert(0, str(APP_DIR))
