@@ -4,8 +4,8 @@
 
 The SECS system must provide four main security goals:
 
-1. Non-repudiation of origin: Alice cannot credibly deny signing the contract.
-2. Non-repudiation of receipt: Bob cannot credibly deny receiving the final signed contract, and Alice cannot deny receiving Bob's signed receipt.
+1. Non-repudiation of origin: Neither Alice nor Bob can credibly deny signing the contract.
+2. Non-repudiation of receipt: Neither Alice nor Bob can credibly deny receiving the final copy containing both signatures.
 3. Integrity: modifications to the contract must be detected.
 4. Confidentiality: the contract terms must not be readable by a network attacker while they are transmitted.
 
@@ -21,7 +21,7 @@ Alice and Bob each have a public/private signing key pair and a certificate issu
 
 Alice uses her private signing key to sign the contract hash and relevant protocol information. Bob uses Alice's public key from her certificate to verify the signature.
 
-Bob also signs a receipt using his private key. This provides evidence that Bob received the signed contract.
+Bob also signs the contract to express acceptance, not just receipt. Both parties then sign separate receipts for the final copy containing both contract signatures. We use RSA signatures over SHA-256, as illustrated in the week-5 notebook; its small demonstration keys are not suitable for a real system.
 
 Digital signatures are used for non-repudiation and authentication because only the holder of the corresponding private key should be able to create a valid signature.
 
@@ -33,7 +33,7 @@ A cryptographic hash such as SHA-256 is used to calculate a digest of the contra
 
 The hash is included in the signatures instead of signing the entire contract directly. If any part of the contract changes, its hash will change and the signature verification will fail.
 
-The contract hash is also included in the receipt so that the receipt is tied to exactly the same contract that Bob received.
+The hash of the final copy, including both signatures, is included in each receipt so that both receipts refer to exactly the same final copy.
 
 ### Authenticated key exchange
 
@@ -75,8 +75,8 @@ The following protocol assumes an attacker can observe, modify, replay, or injec
    |                         2. Certificate_B + DH_public_B |
    |<--------------------------------------------------------|
    |                                                         |
-   |  Both sides validate the other's certificate            |
-   |  and derive the shared session key.                      |
+   |  TLS 1.3 authenticates DH and both parties.              |
+   |  Both validate certificates and establish session keys.  |
    |                                                         |
    |  3. Encrypted contract + nonce +                       |
    |     Alice signature over contract hash + metadata       |
@@ -88,15 +88,19 @@ The following protocol assumes an attacker can observe, modify, replay, or injec
    |                         - Alice's signature              |
    |                         - contract hash                  |
    |                                                         |
-   |                         4. Signed receipt                |
-   |                         containing contract hash,        |
-   |                         contract ID and Bob's signature  |
+   |                         4. Bob signs the contract        |
    |<--------------------------------------------------------|
+   |  Alice verifies Bob's acceptance signature.              |
    |                                                         |
-   |  Alice verifies Bob's certificate and receipt signature. |
-   |                                                         |
-   |  5. Signed acknowledgement of receipt                   |
+   |  5. Final copy with both signatures + Alice's            |
+   |     signed receipt over the final copy's hash            |
    |-------------------------------------------------------->|
+   |                         Bob verifies the final copy.    |
+   |                                                         |
+   |                         6. Bob's signed receipt          |
+   |                         over the same final copy hash   |
+   |<--------------------------------------------------------|
+   |  Alice verifies and stores Bob's receipt.                |
    |                                                         |
         =====================================================
                          TRUST BOUNDARY
@@ -106,7 +110,9 @@ The main trust boundary is the network between Alice and Bob. The network is not
 
 The CA is outside the communication channel and is a trusted third party responsible for binding identities to public keys.
 
-ImagenDeber1 is an anex usefull for understanding the flow.
+The updated image below includes both acceptance signatures and the final-copy receipts.
+
+![Updated SECS message flow](ImagenDeber1.png)
 ---
 
 ## 4. Detailed protocol
@@ -127,9 +133,9 @@ Neither party should accept a key merely because it was received over the networ
 
 Alice and Bob perform an authenticated Diffie-Hellman exchange.
 
-Both derive the same shared secret and use a key derivation function to derive the AES-GCM session key.
+We use TLS 1.3 for this exchange, as described in week 5: authenticated Diffie-Hellman, certificates, and AES-GCM. Both parties must be authenticated and validate the expected identity. TLS establishes the encryption keys.
 
-The ephemeral public keys and the identities of both parties are bound to the protocol transcript so that an attacker cannot substitute keys without detection.
+The DH values must be authenticated within the TLS exchange before sending the contract. Sending a valid certificate beside an unsigned DH value is not enough to prevent the MITM attack. All following messages, including receipts, travel through this protected channel.
 
 ---
 
@@ -141,9 +147,9 @@ Alice calculates:
 
 She creates a signature over information such as:
 
-`contract_id || H || Alice_ID || Bob_ID`
+`ACCEPT || contract_id || H || Alice_ID || Bob_ID`
 
-Alice then encrypts the contract using AES-GCM with the derived session key and a fresh nonce.
+Alice then sends the contract through the AES-GCM protected channel with a nonce that never repeats under the same key. Both parties use the exact same contract bytes and an agreed format with clearly separated signed fields. The contract ID identifies this contract and version; old messages must not be accepted for a different contract or version.
 
 The message sent to Bob contains:
 
@@ -160,35 +166,41 @@ The AES-GCM encryption prevents a network attacker from reading the contract ter
 
 ---
 
-### Step 4 — Bob verifies and signs a receipt
+### Step 4 — Bob verifies and signs the contract
 
-Bob first authenticates Alice's certificate and verifies Alice's signature.
+Bob authenticates Alice's certificate, decrypts the contract, and calculates its SHA-256 hash. He verifies Alice's signature using this hash and accepts the message only if the signature and AES-GCM authentication succeed.
 
-He decrypts the contract and calculates its SHA-256 hash.
+If Bob agrees to the terms, he signs the same acceptance statement:
 
-Bob accepts the contract only if the calculated hash matches the hash covered by Alice's signature and the AES-GCM authentication succeeds.
+`ACCEPT || contract_id || H || Alice_ID || Bob_ID`
 
-Bob then creates a receipt containing at least:
-
-`contract_id || H || Alice_signature`
-
-Bob signs this receipt using his private signing key.
-
-The receipt is sent back to Alice.
-
-This provides evidence that Bob received the specific contract identified by the hash.
+He sends his contract signature to Alice. This signature expresses acceptance; a receipt alone would not express agreement to the terms.
 
 ---
 
-### Step 5 — Alice acknowledges the receipt
+### Step 5 — Alice verifies and sends the final signed copy
 
-Alice verifies Bob's certificate and Bob's signature on the receipt.
+Alice verifies Bob's certificate and contract signature. The final copy contains the exact contract and both acceptance signatures:
 
-Alice stores the receipt as evidence that Bob acknowledged receiving the contract.
+`final_copy = (contract, Alice_signature, Bob_signature)`
 
-Alice then sends a signed acknowledgement confirming that she received Bob's receipt.
+Alice stores and verifies this copy, calculates `HF = SHA-256(final_copy)`, and signs a receipt:
 
-Both parties therefore have signed evidence associated with the same contract hash.
+`RECEIVED_FINAL || contract_id || HF || Alice_ID || Bob_ID || Alice_ID`
+
+The last field identifies who acknowledges receipt. Alice sends the final copy and her signed receipt to Bob.
+
+---
+
+### Step 6 — Bob acknowledges the final copy
+
+Bob verifies both contract signatures, checks that the contract is the one he accepted, and verifies Alice's receipt against the hash of the exact final copy. Only then does he store it and sign:
+
+`RECEIVED_FINAL || contract_id || HF || Alice_ID || Bob_ID || Bob_ID`
+
+Bob sends this receipt to Alice, who verifies and stores it. Both preserve the final copy, signed statements, receipts, and certificates as evidence.
+
+Receipt signatures are issued only after receiving and verifying the final copy. They show receipt by the application, not that a person read every term. If a message is blocked or a party stops cooperating, no claim may be made about a missing signature or receipt. Alice considers the exchange complete only after verifying Bob's final receipt; Bob cannot assume Alice received it merely because he sent it.
 
 ---
 
@@ -196,17 +208,17 @@ Both parties therefore have signed evidence associated with the same contract ha
 
 ## Non-repudiation of origin
 
-**Guarantee:** Alice cannot credibly deny signing the contract because the contract hash and contract metadata are covered by Alice's digital signature.
+**Guarantee:** Neither Alice nor Bob can credibly deny signing the contract when both verified acceptance signatures cover the same contract hash and metadata.
 
-**Condition:** This guarantee holds provided Alice's private signing key has not been compromised, the signature algorithm remains secure, and the CA has correctly authenticated Alice's identity and has not mis-issued her certificate.
+**Condition:** This guarantee holds provided both acceptance signatures have been obtained and verified, neither private signing key has been compromised, SHA-256 and the signature algorithm remain secure, the CA has correctly bound both identities to their keys, certificates are correctly validated, and the signed evidence is preserved.
 
 ---
 
 ## Non-repudiation of receipt
 
-**Guarantee:** Bob cannot credibly deny receiving the final signed contract because he produces a signed receipt containing the contract identifier and cryptographic hash of the contract. Alice also cannot deny receiving Bob's receipt because she sends a signed acknowledgement.
+**Guarantee:** Neither party can credibly deny receiving the final copy containing both contract signatures when the other holds their verified receipt over that exact final copy's hash.
 
-**Condition:** This guarantee holds provided Bob's private signing key has not been compromised, the certificates are correctly validated, the signed receipt is securely preserved, and the contract hash uniquely identifies the received contract.
+**Condition:** This guarantee holds provided the corresponding receipt has been obtained and verified, receipts are issued only after receiving and verifying the final copy, neither signing key has been compromised, certificates and identities are correctly validated, SHA-256 and signatures remain secure, and the final copy and receipts are securely preserved.
 
 ---
 
@@ -214,7 +226,7 @@ Both parties therefore have signed evidence associated with the same contract ha
 
 **Guarantee:** Any modification to the contract after signing will be detected because the contract hash covered by Alice's signature will no longer match the modified contract. AES-GCM also detects modifications to the encrypted message.
 
-**Condition:** This guarantee holds provided SHA-256 and the digital signature and AEAD primitives remain cryptographically secure, and AES-GCM never reuses a nonce with the same key.
+**Condition:** This guarantee holds provided SHA-256 and the digital signature and AEAD primitives remain cryptographically secure, signing keys remain protected, certificates are correctly validated, and AES-GCM never reuses a nonce with the same key.
 
 ---
 
@@ -222,7 +234,7 @@ Both parties therefore have signed evidence associated with the same contract ha
 
 **Guarantee:** A network attacker observing the communication cannot recover the contract terms from the transmitted ciphertext.
 
-**Condition:** This guarantee holds provided the Diffie-Hellman exchange is authenticated, the session key remains secret, the encryption primitive remains secure, and the session key and private keys have not been compromised.
+**Condition:** This guarantee holds provided the Diffie-Hellman exchange is authenticated, the session key remains secret, the encryption primitive remains secure, AES-GCM never reuses a nonce with the same key, certificates identify the intended parties through a trustworthy CA and trusted store, and the session key, private keys, and endpoints have not been compromised.
 
 ---
 
@@ -256,7 +268,7 @@ SECS uses AES-GCM with a fresh nonce for each encryption under a given key. The 
 
 ### 4. Length extension in the token MAC
 
-The token deployment used `SHA256(secret || data)` as a MAC. Because of the hash construction, an attacker could extend the message and create a valid tag without knowing the secret.
+The token deployment models `SHA256(secret || data)` as a MAC using a simplified teaching hash. Because of the hash construction, an attacker could extend the message and create a valid tag without knowing the secret.
 
 SECS does not construct authentication by simply concatenating a secret with a message and hashing it. It uses digital signatures for non-repudiation and AES-GCM for authenticated encryption.
 
@@ -274,7 +286,7 @@ SECS assumes that signing and key-exchange private keys are generated using a cr
 
 The timing deployment compared secrets using an early-exit comparison, leaking information through execution time.
 
-SECS does not use a byte-by-byte early-exit comparison to authenticate the contract. Authentication is performed using cryptographic signature and AEAD verification algorithms designed for this purpose.
+SECS does not use a byte-by-byte early-exit comparison to authenticate the contract. Secret comparisons must use constant-time operations such as `hmac.compare_digest`, as seen in week 4. Signature and AEAD implementations must also avoid timing leaks of private keys; choosing these algorithms alone is not sufficient.
 
 ---
 
@@ -289,6 +301,8 @@ Private signing keys must remain secret. If Alice's private key is stolen, an at
 Similarly, if Bob's private key is compromised, an attacker could create fraudulent receipts.
 
 The protocol also assumes that the cryptographic algorithms remain secure and are implemented correctly.
+
+The protocol cannot force a party to sign or prevent the network from blocking messages. An interrupted exchange may leave one party with more evidence than the other. Receipt guarantees apply only to the receipts actually obtained and verified.
 
 Finally, signed evidence must be retained. A signature is useful as evidence only if the parties preserve the signed contract, receipt, certificates, and relevant protocol metadata.
 

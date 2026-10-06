@@ -2,7 +2,7 @@ import sys
 from math import gcd, prod
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "duel-1-crypto"))
 from duel1_targets import keygen_fleet
 
 
