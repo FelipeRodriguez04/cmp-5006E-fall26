@@ -1,0 +1,50 @@
+{
+  "run_utc": "2026-11-04T23:15:48.148350+00:00",
+  "python": "3.14.0",
+  "medium": "student adaptation; upstream has no Medium",
+  "false_positives": {
+    "medium": {
+      "login_username": {
+        "blocked": 0,
+        "total": 9,
+        "fp_rate": 0.0
+      },
+      "all": {
+        "blocked": 0,
+        "total": 26,
+        "fp_rate": 0.0
+      }
+    },
+    "waf": {
+      "login_username": {
+        "blocked": 2,
+        "total": 9,
+        "fp_rate": 0.2222222222222222
+      },
+      "all": {
+        "blocked": 2,
+        "total": 26,
+        "fp_rate": 0.07692307692307693
+      }
+    },
+    "positive": {
+      "login_username": {
+        "blocked": 0,
+        "total": 9,
+        "fp_rate": 0.0
+      },
+      "all": {
+        "blocked": 0,
+        "total": 26,
+        "fp_rate": 0.0
+      }
+    }
+  },
+  "sha256": {
+    "labs/vuln-web/app/vulnweb_app.py": "fd87ee62ede6fd83befb5b37b8a0f8335f86178522c3ab1480b7d56aa0ae257e",
+    "homework/hw2/rodriguez_felipe/benign_traffic.json": "187a8d4800a16d3f0f80a6f9a826ebbd44b6692ff05fd5ce2907271217fb1ce0",
+    "homework/hw2/rodriguez_felipe/target.py": "88394c6070c1e54eca2b07bdefc89e8db8277e5eac409a937aa62c2da42be13c",
+    "homework/hw2/rodriguez_felipe/defend/controls.py": "e2ec02509655417879ee66779e1cfde05b8cc88dcbec171eb792f9baf2ee9f71",
+    "homework/hw2/rodriguez_felipe/run.py": "fb9b3d7496caca25e434a774697d39dc818e33e5ff87d29bf4f8c33579003c9c"
+  }
+}
