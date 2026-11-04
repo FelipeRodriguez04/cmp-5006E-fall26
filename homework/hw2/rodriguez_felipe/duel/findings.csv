@@ -1,0 +1,8 @@
+tool,rule,location,severity,confidence,evidence
+semgrep,sqli,do_login,ERROR,rule-based,User-controlled values are interpolated into a SQL query.
+semgrep,xss,do_reflect,WARNING,rule-based,User input is returned in HTML without context-aware encoding.
+llm_run_1,sqli,do_login,high,medium,SQL injection due to the use of string-formatted query without parameterization.
+llm_run_1,xss,do_reflect,high,medium,Reflected XSS due to the use of unencoded user input in the HTML.
+llm_run_2,sqli,do_login,high,medium,do_login function is vulnerable to SQL injection and reflected XSS due to the use of unparameterized queries and input not being properly sanitized.
+llm_run_2,xss,do_reflect,high,medium,do_reflect function is vulnerable to reflected XSS due to the lack of input sanitization.
+llm_run_2,cmdi,do_ping,high,medium,do_ping function is vulnerable to command injection because the host input is concatenated into a command without proper sanitization.
