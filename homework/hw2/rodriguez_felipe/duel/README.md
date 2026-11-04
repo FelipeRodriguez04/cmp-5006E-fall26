@@ -29,8 +29,8 @@ Generated files:
 
 The Semgrep rules are intentionally narrow and detect the SQLi and XSS patterns.
 A missed command-injection finding is therefore a limitation of this rule set,
-not a claim about every Semgrep rule pack. Review the actual outputs before
-writing numeric results into the homework report.
+not a claim about every Semgrep rule pack. The recorded outputs and calculated
+metrics are documented in [results.md](results.md).
 
 ## Reproduce the committed comparison without installed tools
 
