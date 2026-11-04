@@ -69,7 +69,8 @@ See [attack/results.csv](attack/results.csv) and the responses for each trial in
   observed JavaScript execution is claimed.
 - **Simulated command injection:** `POST /ping`, host
   `127.0.0.1 | printf CMDI_OK`. The pipe bypasses the semicolon filter. The oracle
-  requires `injection_detected=true` and `| printf CMDI_OK` inside `would_run`.
+  requires `injection_detected=true` and either `| printf CMDI_OK` or
+  `; printf CMDI_OK` inside `would_run`, covering both the bypass and the control.
   Confirmed in 3/3 trials in the course simulator. Neither `printf`, `ping`, nor
   any other process was executed; this does not demonstrate actual shell
   execution.
@@ -113,7 +114,7 @@ Each payload also bypasses the local Medium rules. Changing case alone no
 longer bypasses this WAF; changing the SQL construction does.
 
 The **26 original entries** from
-`homework/hw2/duel-2-web/benign_traffic.json` were sent to their corresponding
+[`benign_traffic.json`](benign_traffic.json), copied unchanged from the course fixture, were sent to their corresponding
 endpoints without modifying the corpus or applying login rules to searches.
 See [defend/benign_results.csv](defend/benign_results.csv).
 
@@ -166,3 +167,21 @@ two false positives demonstrate both its incomplete coverage and its cost.
 Parameterization prevents values from being interpreted as SQL structure; the
 18 trials are experimental evidence, while the guarantee follows from the
 separation of code and data rather than the size of the test set.
+
+## C and D — Comparison and limitations
+
+See [duel/results.md](duel/results.md) for the scores, hallucination,
+scanner miss, run-to-run changes, and access-control result, and
+[honesty.md](honesty.md) for the limitations.
+[ground_truth_review.md](ground_truth_review.md) documents fixture provenance
+and source verification. Both JSON fixtures are included in this directory.
+
+Recompute the comparison from the committed original tool outputs:
+
+```bash
+python3 homework/hw2/rodriguez_felipe/duel/run_duel.py --replay
+```
+
+This does not make new model calls. Fresh-run instructions and dependencies are
+in [duel/README.md](duel/README.md). Strict scoring retains malformed labels and
+all reported entries without inferring vulnerability classes from function names.

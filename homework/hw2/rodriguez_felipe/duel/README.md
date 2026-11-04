@@ -16,8 +16,8 @@ two separate model answers. Do not use `echo` as evidence because it is not a
 real model.
 
 The script scans the same `vulnweb_app.py` source with a small custom Semgrep
-rule set and an LLM. It scores the outputs using the hand-built course
-`ground_truth.json`. The two LLM calls use different seeds, nonzero
+rule set and an LLM. It scores the outputs using the course
+`../ground_truth.json`. The two LLM calls use different seeds, nonzero
 temperature, and disabled caching.
 
 Generated files:
@@ -31,3 +31,22 @@ The Semgrep rules are intentionally narrow and detect the SQLi and XSS patterns.
 A missed command-injection finding is therefore a limitation of this rule set,
 not a claim about every Semgrep rule pack. Review the actual outputs before
 writing numeric results into the homework report.
+
+## Reproduce the committed comparison without installed tools
+
+```bash
+python3 homework/hw2/rodriguez_felipe/duel/run_duel.py --replay
+```
+
+Replay uses the two original responses in llm_runs.json and the saved Semgrep
+rows in findings.csv. It does not rerun either tool. Raw model responses and
+scanner metadata remain the original evidence. Scoring preserves reported
+labels, including invalid labels, safe-function reports and access-control
+claims. No label is inferred from its function name. The saved prompt's enum-like
+example confused the model; this output-format weakness is part of the result.
+
+The report derives scanner misses, explicit access-control labels, and run-to-run
+changes from the results. Manual interpretation of rationales is attached only
+when the SHA-256 hashes of both responses match the reviewed evidence. Different
+responses are marked as requiring manual review, including when replaying saved
+outputs. Inspect those rationales before treating a new report as complete.

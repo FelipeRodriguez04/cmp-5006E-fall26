@@ -19,7 +19,7 @@ The command-injection finding is the one whose real-world impact we describe mos
 ## 5. LLM variability and interpretation
 
 The LLM was run twice with the same source and prompt, nonzero temperature, different seeds, and caching disabled. Two runs are the minimum required to expose possible variation, not enough to estimate a stable statistical rate. A different model, prompt, temperature, or seed could change the findings. Any LLM claim that is not supported by the source—especially a claim about broken access control when no sessions, roles, or authorization checks exist—must be treated as a false positive rather than accepted because it sounds plausible.
-In the second LLM run, the explanation for `do_login` incorrectly associated reflected XSS with that function, even though the XSS vulnerability is located in `do_reflect`. The structured finding was still scored as SQL injection in `do_login`, but this shows that the model's explanation can contain inaccurate details even when its final classification is correct.
+In the second recorded LLM run, the explanation for `do_login` incorrectly associated reflected XSS with that function, even though the XSS vulnerability is located in `do_reflect`. The parser preserves the reported label and scores invalid labels as unmatched without inferring vulnerability classes from function names; the rationale hallucination is documented separately.
 
 ## 6. Medium-mode adaptation
 
