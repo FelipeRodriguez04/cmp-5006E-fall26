@@ -26,30 +26,26 @@ the Python version, and hashes identify the run.
 To inspect each defense manually:
 
 ```bash
-python3 homework/hw2/rodriguez_felipe/target.py --mode medium
+python3 homework/hw2/rodriguez_felipe/target.py --mode original
 python3 homework/hw2/rodriguez_felipe/target.py --mode waf
 python3 homework/hw2/rodriguez_felipe/target.py --mode positive
 ```
 
 Run one server at a time; stop it with Ctrl+C. The `--port` option is configurable.
 
-## Assignment discrepancy: Medium
+## Target and modes
 
-The original `labs/vuln-web/app/vulnweb_app.py` file **does not implement security
-levels or Medium filters**. It would be inaccurate to claim that an official
-Medium mode was tested. `target.py` adds an explicit student adaptation without
-modifying the shared code. 
+Following the professor's clarification, Part A tests the original
+`labs/vuln-web/app/vulnweb_app.py` directly, without student filters.
+`target.py --mode original` returns the course's unmodified `app.Handler`;
+only the local server binding and fresh test database are managed by the runner.
+The `waf` mode adds our login blocklist, and `positive` applies the structural
+fixes.
 
-The rules apply after HTTP/JSON decoding:
-
-| Class | Local Medium rule | Blocked or neutralized control | Part A bypass |
-|---|---|---|---|
-| SQLi | Rejects uppercase `OR` or `UNION` in the username or password | `admin' OR 1=1--` | `admin' or 1=1--` |
-| XSS | Removes the exact strings `<script>` and `</script>` | `<script>alert(1)</script>` | `<ScRiPt>alert(1)</ScRiPt>` |
-| cmdi | Rejects `;` in the host | `127.0.0.1; printf CMDI_OK` | `127.0.0.1 \| printf CMDI_OK` |
-
-All three controls lose their attack effect in 3/3 trials; all three Part A
-bypasses retain their effect in 3/3 trials. Double decoding was not needed.
+The existing payloads are retained for reproducibility. `A_control` identifies
+three baseline payloads (uppercase SQL `OR`, lowercase script tags, and a
+semicolon command separator); `A` identifies their lowercase SQL, mixed-case
+tag, and pipe variants. All six succeed in 3/3 trials against `original`.
 
 ## A — Evidence and classification
 
@@ -63,14 +59,14 @@ See [attack/results.csv](attack/results.csv) and the responses for each trial in
   `["admin", "FLAG-sqli-9f2c-admin-session"]` inside `rows`; it does not accept a
   SQL error or a reflected query. Confirmed in 3/3 trials.
 - **Reflected XSS:** `GET /?name=...`, with URL-encoded
-  `<ScRiPt>alert(1)</ScRiPt>`. The case-sensitive removal fails. The oracle parses
+  `<ScRiPt>alert(1)</ScRiPt>`. The original target reflects the input without escaping. The oracle parses
   the HTML and finds an unescaped `script` element and its code. Confirmed in
   3/3 trials under the homework's criterion. No browser was automated, and no
   observed JavaScript execution is claimed.
 - **Simulated command injection:** `POST /ping`, host
-  `127.0.0.1 | printf CMDI_OK`. The pipe bypasses the semicolon filter. The oracle
+  `127.0.0.1 | printf CMDI_OK`. The host reaches the simulated command unchanged. The oracle
   requires `injection_detected=true` and either `| printf CMDI_OK` or
-  `; printf CMDI_OK` inside `would_run`, covering both the bypass and the control.
+  `; printf CMDI_OK` inside `would_run`, covering both variants.
   Confirmed in 3/3 trials in the course simulator. Neither `printf`, `ping`, nor
   any other process was executed; this does not demonstrate actual shell
   execution.
@@ -92,26 +88,25 @@ uses the definition of authorization in
 
 In `waf` mode, `target.py` applies the blocklist from
 [defend/controls.py](defend/controls.py) to **both `/login` fields**, before the
-actual sink and after the Medium filter. It rejects `OR` as a word or the
+actual sink. It rejects `OR` as a word or the
 substrings `select`, `union`, and `drop`, ignoring case. It is not presented as a
 production WAF.
 
-Coverage of Part A: **1/1 SQLi payload blocked (100%)**; **1/3 total payloads
-blocked (33.33%)**. XSS and cmdi retain 3/3 successes each because this blocklist
+Coverage of Part A (`A` and `A_control`): **2/2 SQLi payloads blocked (100%)**;
+**2/6 total payloads blocked (33.33%)**. XSS and cmdi retain 3/3 successes each because this blocklist
 protects only the login. Their failure is not counted as SQLi coverage.
 
 The defense was deployed before testing these three additional payloads with
 the same goal: retrieving the admin canary using password `x`.
 
-| Username payload | Why it bypasses the WAF | Medium | WAF | Positive defense |
+| Username payload | Why it bypasses the WAF | Original | WAF | Positive defense |
 |---|---|---|---|---|
 | `admin'--` | The comment removes the password check without blocked words | 3/3 | 3/3 | 0/3 |
 | `admin' and pw glob '*'--` | True GLOB predicate; does not use OR | 3/3 | 3/3 | 0/3 |
 | `admin' and 2 between 1 and 3--` | True BETWEEN predicate; does not use OR | 3/3 | 3/3 | 0/3 |
 
 These bypasses are confirmed by returned rows, not merely accepted requests.
-Each payload also bypasses the local Medium rules. Changing case alone no
-longer bypasses this WAF; changing the SQL construction does.
+Changing case alone does not bypass this WAF; changing the SQL construction does.
 
 The **26 original entries** from
 [`benign_traffic.json`](benign_traffic.json), copied unchanged from the course fixture, were sent to their corresponding
@@ -122,7 +117,7 @@ See [defend/benign_results.csv](defend/benign_results.csv).
 - Entire corpus: **2/26 FP = 7.69%**; the other fields dilute the average.
 - Blocked legitimate requests: usernames `select_committee_chair` and
   `unionrep_delegate`, because they contain the substrings `select` and `union`.
-- Medium: **0/26** blocked. Positive defense: **0/26** blocked.
+- Original: **0/26** blocked. Positive defense: **0/26** blocked.
 
 Returning `ok=false` for nonexistent credentials is a normal authentication
 response, not a false positive. Here, FP means filter rejection (403) of a
@@ -139,7 +134,7 @@ db.execute(
 )
 ```
 
-It does not depend on the Medium rules or the WAF. **If every username and
+It does not depend on the WAF. **If every username and
 password input reaches the query exclusively as a value of these parameters,
 the query preserves its structure for any input string.** The guarantee is
 limited to this sink and correct API usage: it does not imply protection of
@@ -156,8 +151,8 @@ or number, and has a bounded length; it does not attempt to validate all DNS
 names. The XSS guarantee applies to this text context, not to JavaScript or
 attributes.
 
-Result: the **3 Part A payloads + 3 B1 bypasses** each have **0/3 successes** in
-positive mode (**0/18 trials**). The original controls are also neutralized.
+Result: the **6 Part A payloads (including `A_control`) + 3 B1 bypasses** each
+have **0/3 successes** in positive mode (**0/27 trials**).
 Valid admin and alice logins still work, incorrect passwords fail, and SQLi
 attacks are also tested in the password field. Normal hosts and names remain
 accepted. The CSV files and `defend/summary.json` record the measurements.
@@ -165,7 +160,7 @@ accepted. The CSV files and `defend/summary.json` record the measurements.
 The blocklist recognizes a finite set of signatures: its three bypasses and
 two false positives demonstrate both its incomplete coverage and its cost.
 Parameterization prevents values from being interpreted as SQL structure; the
-18 trials are experimental evidence, while the guarantee follows from the
+27 trials are experimental evidence, while the guarantee follows from the
 separation of code and data rather than the size of the test set.
 
 ## C and D — Comparison and limitations

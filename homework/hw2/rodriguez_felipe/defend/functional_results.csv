@@ -1,7 +1,7 @@
 mode,case,passed
-medium,login admin expected=True,True
-medium,login alice expected=True,True
-medium,login admin expected=False,True
+original,login admin expected=True,True
+original,login alice expected=True,True
+original,login admin expected=False,True
 waf,login admin expected=True,True
 waf,login alice expected=True,True
 waf,login admin expected=False,True

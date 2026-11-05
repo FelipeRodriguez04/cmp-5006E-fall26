@@ -1,78 +1,78 @@
 [
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A_control",
     "family": "sqli",
     "payload": "admin' OR 1=1--",
-    "status": 403,
-    "body": "{\"blocked\": \"medium\"}"
+    "status": 200,
+    "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"], [\"alice\", \"ordinary-row\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A_control",
     "family": "sqli",
     "payload": "admin' OR 1=1--",
-    "status": 403,
-    "body": "{\"blocked\": \"medium\"}"
+    "status": 200,
+    "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"], [\"alice\", \"ordinary-row\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A_control",
     "family": "sqli",
     "payload": "admin' OR 1=1--",
-    "status": 403,
-    "body": "{\"blocked\": \"medium\"}"
+    "status": 200,
+    "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"], [\"alice\", \"ordinary-row\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A_control",
     "family": "xss",
     "payload": "<script>alert(1)</script>",
     "status": 200,
-    "body": "<html><body><h1>Hello, alert(1)!</h1></body></html>"
+    "body": "<html><body><h1>Hello, <script>alert(1)</script>!</h1></body></html>"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A_control",
     "family": "xss",
     "payload": "<script>alert(1)</script>",
     "status": 200,
-    "body": "<html><body><h1>Hello, alert(1)!</h1></body></html>"
+    "body": "<html><body><h1>Hello, <script>alert(1)</script>!</h1></body></html>"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A_control",
     "family": "xss",
     "payload": "<script>alert(1)</script>",
     "status": 200,
-    "body": "<html><body><h1>Hello, alert(1)!</h1></body></html>"
+    "body": "<html><body><h1>Hello, <script>alert(1)</script>!</h1></body></html>"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A_control",
     "family": "cmdi",
     "payload": "127.0.0.1; printf CMDI_OK",
-    "status": 403,
-    "body": "{\"blocked\": \"medium\"}"
+    "status": 200,
+    "body": "{\"would_run\": \"ping -c 1 127.0.0.1; printf CMDI_OK\", \"injection_detected\": true, \"note\": \"extra command(s) smuggled in via a shell metacharacter\"}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A_control",
     "family": "cmdi",
     "payload": "127.0.0.1; printf CMDI_OK",
-    "status": 403,
-    "body": "{\"blocked\": \"medium\"}"
+    "status": 200,
+    "body": "{\"would_run\": \"ping -c 1 127.0.0.1; printf CMDI_OK\", \"injection_detected\": true, \"note\": \"extra command(s) smuggled in via a shell metacharacter\"}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A_control",
     "family": "cmdi",
     "payload": "127.0.0.1; printf CMDI_OK",
-    "status": 403,
-    "body": "{\"blocked\": \"medium\"}"
+    "status": 200,
+    "body": "{\"would_run\": \"ping -c 1 127.0.0.1; printf CMDI_OK\", \"injection_detected\": true, \"note\": \"extra command(s) smuggled in via a shell metacharacter\"}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A",
     "family": "sqli",
     "payload": "admin' or 1=1--",
@@ -80,7 +80,7 @@
     "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"], [\"alice\", \"ordinary-row\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A",
     "family": "sqli",
     "payload": "admin' or 1=1--",
@@ -88,7 +88,7 @@
     "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"], [\"alice\", \"ordinary-row\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A",
     "family": "sqli",
     "payload": "admin' or 1=1--",
@@ -96,7 +96,7 @@
     "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"], [\"alice\", \"ordinary-row\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A",
     "family": "xss",
     "payload": "<ScRiPt>alert(1)</ScRiPt>",
@@ -104,7 +104,7 @@
     "body": "<html><body><h1>Hello, <ScRiPt>alert(1)</ScRiPt>!</h1></body></html>"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A",
     "family": "xss",
     "payload": "<ScRiPt>alert(1)</ScRiPt>",
@@ -112,7 +112,7 @@
     "body": "<html><body><h1>Hello, <ScRiPt>alert(1)</ScRiPt>!</h1></body></html>"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A",
     "family": "xss",
     "payload": "<ScRiPt>alert(1)</ScRiPt>",
@@ -120,7 +120,7 @@
     "body": "<html><body><h1>Hello, <ScRiPt>alert(1)</ScRiPt>!</h1></body></html>"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A",
     "family": "cmdi",
     "payload": "127.0.0.1 | printf CMDI_OK",
@@ -128,7 +128,7 @@
     "body": "{\"would_run\": \"ping -c 1 127.0.0.1 | printf CMDI_OK\", \"injection_detected\": true, \"note\": \"extra command(s) smuggled in via a shell metacharacter\"}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A",
     "family": "cmdi",
     "payload": "127.0.0.1 | printf CMDI_OK",
@@ -136,7 +136,7 @@
     "body": "{\"would_run\": \"ping -c 1 127.0.0.1 | printf CMDI_OK\", \"injection_detected\": true, \"note\": \"extra command(s) smuggled in via a shell metacharacter\"}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "A",
     "family": "cmdi",
     "payload": "127.0.0.1 | printf CMDI_OK",
@@ -144,7 +144,7 @@
     "body": "{\"would_run\": \"ping -c 1 127.0.0.1 | printf CMDI_OK\", \"injection_detected\": true, \"note\": \"extra command(s) smuggled in via a shell metacharacter\"}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "B1_bypass",
     "family": "sqli",
     "payload": "admin'--",
@@ -152,7 +152,7 @@
     "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "B1_bypass",
     "family": "sqli",
     "payload": "admin'--",
@@ -160,7 +160,7 @@
     "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "B1_bypass",
     "family": "sqli",
     "payload": "admin'--",
@@ -168,7 +168,7 @@
     "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "B1_bypass",
     "family": "sqli",
     "payload": "admin' and pw glob '*'--",
@@ -176,7 +176,7 @@
     "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "B1_bypass",
     "family": "sqli",
     "payload": "admin' and pw glob '*'--",
@@ -184,7 +184,7 @@
     "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "B1_bypass",
     "family": "sqli",
     "payload": "admin' and pw glob '*'--",
@@ -192,7 +192,7 @@
     "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "B1_bypass",
     "family": "sqli",
     "payload": "admin' and 2 between 1 and 3--",
@@ -200,7 +200,7 @@
     "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "B1_bypass",
     "family": "sqli",
     "payload": "admin' and 2 between 1 and 3--",
@@ -208,7 +208,7 @@
     "body": "{\"ok\": true, \"rows\": [[\"admin\", \"FLAG-sqli-9f2c-admin-session\"]]}"
   },
   {
-    "mode": "medium",
+    "mode": "original",
     "group": "B1_bypass",
     "family": "sqli",
     "payload": "admin' and 2 between 1 and 3--",
@@ -221,7 +221,7 @@
     "family": "sqli",
     "payload": "admin' OR 1=1--",
     "status": 403,
-    "body": "{\"blocked\": \"medium\"}"
+    "body": "{\"blocked\": \"keyword OR\"}"
   },
   {
     "mode": "waf",
@@ -229,7 +229,7 @@
     "family": "sqli",
     "payload": "admin' OR 1=1--",
     "status": 403,
-    "body": "{\"blocked\": \"medium\"}"
+    "body": "{\"blocked\": \"keyword OR\"}"
   },
   {
     "mode": "waf",
@@ -237,7 +237,7 @@
     "family": "sqli",
     "payload": "admin' OR 1=1--",
     "status": 403,
-    "body": "{\"blocked\": \"medium\"}"
+    "body": "{\"blocked\": \"keyword OR\"}"
   },
   {
     "mode": "waf",
@@ -245,7 +245,7 @@
     "family": "xss",
     "payload": "<script>alert(1)</script>",
     "status": 200,
-    "body": "<html><body><h1>Hello, alert(1)!</h1></body></html>"
+    "body": "<html><body><h1>Hello, <script>alert(1)</script>!</h1></body></html>"
   },
   {
     "mode": "waf",
@@ -253,7 +253,7 @@
     "family": "xss",
     "payload": "<script>alert(1)</script>",
     "status": 200,
-    "body": "<html><body><h1>Hello, alert(1)!</h1></body></html>"
+    "body": "<html><body><h1>Hello, <script>alert(1)</script>!</h1></body></html>"
   },
   {
     "mode": "waf",
@@ -261,31 +261,31 @@
     "family": "xss",
     "payload": "<script>alert(1)</script>",
     "status": 200,
-    "body": "<html><body><h1>Hello, alert(1)!</h1></body></html>"
+    "body": "<html><body><h1>Hello, <script>alert(1)</script>!</h1></body></html>"
   },
   {
     "mode": "waf",
     "group": "A_control",
     "family": "cmdi",
     "payload": "127.0.0.1; printf CMDI_OK",
-    "status": 403,
-    "body": "{\"blocked\": \"medium\"}"
+    "status": 200,
+    "body": "{\"would_run\": \"ping -c 1 127.0.0.1; printf CMDI_OK\", \"injection_detected\": true, \"note\": \"extra command(s) smuggled in via a shell metacharacter\"}"
   },
   {
     "mode": "waf",
     "group": "A_control",
     "family": "cmdi",
     "payload": "127.0.0.1; printf CMDI_OK",
-    "status": 403,
-    "body": "{\"blocked\": \"medium\"}"
+    "status": 200,
+    "body": "{\"would_run\": \"ping -c 1 127.0.0.1; printf CMDI_OK\", \"injection_detected\": true, \"note\": \"extra command(s) smuggled in via a shell metacharacter\"}"
   },
   {
     "mode": "waf",
     "group": "A_control",
     "family": "cmdi",
     "payload": "127.0.0.1; printf CMDI_OK",
-    "status": 403,
-    "body": "{\"blocked\": \"medium\"}"
+    "status": 200,
+    "body": "{\"would_run\": \"ping -c 1 127.0.0.1; printf CMDI_OK\", \"injection_detected\": true, \"note\": \"extra command(s) smuggled in via a shell metacharacter\"}"
   },
   {
     "mode": "waf",

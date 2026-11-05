@@ -104,14 +104,14 @@ def target(mode):
 
 def write_csv(path, rows):
     with path.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
 
 def main():
     attack_rows, responses, benign_rows, functional = [], [], [], []
-    for mode in ("medium", "waf", "positive"):
+    for mode in ("original", "waf", "positive"):
         with target(mode) as base:
             sets = [("A_control", CONTROLS), ("A", ATTACKS), ("B1_bypass", BYPASSES)]
             for group, payloads in sets:
@@ -125,8 +125,8 @@ def main():
                     finding = run_payloads([payload], send=send, oracle=oracle, trials=3)[0]
                     if finding.error:
                         raise RuntimeError(finding.error)
-                    expected = mode != "positive" and group != "A_control"
-                    if mode == "waf" and group == "A" and payload.family == "sqli":
+                    expected = mode != "positive"
+                    if mode == "waf" and group in ("A", "A_control") and payload.family == "sqli":
                         expected = False
                     if finding.successes != (3 if expected else 0):
                         raise AssertionError((mode, group, payload, finding))
@@ -141,7 +141,7 @@ def main():
                 assert status == 200 and json.loads(body)["ok"] is expected
                 functional.append({"mode": mode, "case": f"login {user} expected={expected}", "passed": True})
             if mode == "positive":
-                for payload in ATTACKS[:1] + BYPASSES:
+                for payload in [p for p in CONTROLS + ATTACKS + BYPASSES if p.family == "sqli"]:
                     status, body = request(base, "sqli", user="admin", pw=payload.text)
                     assert status == 200 and json.loads(body)["ok"] is False
                 assert request(base, "cmdi", "localhost")[0] == 200
@@ -165,14 +165,14 @@ def main():
     write_csv(HERE / "defend/functional_results.csv", functional)
     (HERE / "attack/responses.json").write_text(json.dumps(responses, indent=2, ensure_ascii=False) + "\n")
     stats = {}
-    for mode in ("medium", "waf", "positive"):
+    for mode in ("original", "waf", "positive"):
         stats[mode] = {}
         for scope in ("login_username", "all"):
             rows = [r for r in benign_rows if r["mode"] == mode and (scope == "all" or r["field"] == scope)]
             blocked = sum(r["blocked"] for r in rows)
             stats[mode][scope] = {"blocked": blocked, "total": len(rows), "fp_rate": blocked / len(rows)}
     metadata = {"run_utc": datetime.now(timezone.utc).isoformat(), "python": platform.python_version(),
-                "medium": "student adaptation; upstream has no Medium", "false_positives": stats,
+                "original": "unmodified labs/vuln-web/app/vulnweb_app.py Handler", "false_positives": stats,
                 "sha256": {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
                            for p in (Path(app.__file__), CORPUS, HERE / "target.py", HERE / "defend/controls.py", HERE / "run.py")}}
     (HERE / "defend/summary.json").write_text(json.dumps(metadata, indent=2) + "\n")

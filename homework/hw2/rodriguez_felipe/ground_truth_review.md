@@ -15,6 +15,6 @@ original tool runs; it does not establish a pre-registered student benchmark.
 | True negative: do_reflect_safe | html.escape(name) protects the HTML text context. |
 | Absent: broken-access-control | No sessions, roles or protected resource policy exist to establish an independent access-control defect. |
 
-The local Medium wrapper and positive fixes belong to Parts A/B. Both tools in
-Part C review the same original source, as identified by their saved invocation
+Part A uses the original handler; the local WAF and positive fixes belong to
+Part B. Both tools in Part C review the same original source, as identified by their saved invocation
 and runner configuration.
