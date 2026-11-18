@@ -3,15 +3,16 @@
 Fill in the functions below, then run ``python3 test_privacy.py``. All provided
 tests must pass, INCLUDING the two that pin the week's spine against each other:
 
-  * differential privacy gives a **statable ε guarantee** — the noise error is a
-    bound you can write down (mean |error| = 1/ε: ±10 at ε=0.1, ±0.2 at ε=5), and
-    the adversary's advantage is capped at a factor of e^ε; and
+  * differential privacy bounds the change in output-event probabilities by a
+    factor of e^ε. For this count, the expected absolute error is 1/ε; and
   * k-anonymity **only raises cost** — it protects identity but has NO guarantee
     about the secret, and the homogeneity attack watches it leak the diagnosis.
 
 Nothing here touches real personal data — every dataset is synthetic (``data.py``).
 """
-from privacy import quasi_id, generalize, laplace_noise, membership_guess
+from collections import Counter, defaultdict
+
+from privacy import epsilon_guarantee, generalize, laplace_noise, membership_guess, quasi_id
 
 
 # ---- Task 1: re-identify by linkage ----------------------------------------
@@ -28,12 +29,22 @@ def reidentify(released, voter_roll):
         This is the ORACLE: a re-identification is confirmed by a successful NAME
         link, not by "this row looks unique".
 
-    Hints: ``Counter(quasi_id(r) for r in released)`` to find uniques; a dict
-    ``{quasi_id(v): v["name"] for v in voter_roll}`` to link a qid back to a name.
+    When the voter roll supplies zero or multiple distinct names for a given
+    quasi-id, that record cannot confirm a name link.
     """
-    # TODO: count quasi-ids, collect the unique released rows, take the first as
-    #       the victim, and link its quasi-id to a name via the voter roll.
-    raise NotImplementedError
+    released = list(released)
+    counts = Counter(quasi_id(row) for row in released)
+    names = defaultdict(set)
+    for voter in voter_roll:
+        names[quasi_id(voter)].add(voter["name"])
+
+    unique_rows = [row for row in released if counts[quasi_id(row)] == 1]
+    victim = next((row for row in unique_rows if len(names[quasi_id(row)]) == 1), None)
+    return {
+        "fraction_unique": len(unique_rows) / len(released) if released else 0.0,
+        "victim": victim,
+        "victim_name": next(iter(names[quasi_id(victim)])) if victim is not None else None,
+    }
 
 
 # ---- Task 2: k-anonymize, then break it with the homogeneity attack --------
@@ -50,23 +61,20 @@ def homogeneity_attack(group):
     State in your write-up exactly what k-anonymity did (hid identity: k = len(group),
     no unique row) and did NOT do (bound what the attacker learns).
     """
-    # TODO: collect the distinct diagnoses; if there is exactly one, return it.
-    raise NotImplementedError
+    diagnoses = {row["diagnosis"] for row in group}
+    return diagnoses.pop() if len(diagnoses) == 1 else None
 
 
 # ---- Task 3: differential privacy — a statable guarantee -------------------
 
 def noisy_count(true_count, eps, rng):
     """Answer a COUNT query under ε-differential privacy. A count has sensitivity
-    1, so the calibrated Laplace scale is 1/ε. Return the noised answer as a float.
+    1 under add/remove adjacency, so the Laplace scale is 1/ε.
 
     Smaller ε -> more noise -> stronger privacy, less accuracy. The mean absolute
-    error equals 1/ε — a bound you can STATE, unlike anything k-anonymity offers.
-
-    Hint: ``true_count + laplace_noise(1.0 / eps, rng)``.
+    error equals 1/ε in expectation.
     """
-    # TODO: add Laplace noise at scale 1/eps to the true count.
-    raise NotImplementedError
+    return true_count + laplace_noise(1.0 / eps, rng)
 
 
 # ---- Task 4: membership inference on the simulated model -------------------
@@ -81,8 +89,16 @@ def membership_inference(probe, thresholds):
     baseline means the MODEL leaked training membership — a breach with no table
     involved. For a 'diabetes model', being in the training set IS the secret.
     """
-    # TODO: for each threshold, compute accuracy over the probe; return the best.
-    raise NotImplementedError
+    probe = list(probe)
+    best_threshold = None
+    best_correct = -1
+    for threshold in thresholds:
+        correct = sum(membership_guess(row, threshold) == row["member"] for row in probe)
+        if correct > best_correct:
+            best_threshold, best_correct = threshold, correct
+    if not probe or best_correct < 0:
+        raise ValueError("probe and thresholds must both be nonempty")
+    return {"best_threshold": best_threshold, "accuracy": best_correct / len(probe)}
 
 
 if __name__ == "__main__":
@@ -90,31 +106,39 @@ if __name__ == "__main__":
     from data import (RELEASED, VOTER_ROLL, PROBE, HOMOGENEOUS_GROUP,
                       DP_EPSILONS, TRUE_HIV_COUNT, MI_THRESHOLDS)
 
-    try:
-        res = reidentify(RELEASED, VOTER_ROLL)
-        print(f"re-identified {res['fraction_unique']:.0%} uniquely; "
-              f"victim -> {res['victim_name']} (diagnosis {res['victim']['diagnosis']!r})")
-    except NotImplementedError:
-        print("reidentify: not implemented yet")
+    res = reidentify(RELEASED, VOTER_ROLL)
+    print(f"Unique released rows: {res['fraction_unique']:.0%}. "
+          f"Confirmed link: {res['victim_name']} (diagnosis {res['victim']['diagnosis']!r})")
 
-    try:
-        print("homogeneity attack leaks:", homogeneity_attack(HOMOGENEOUS_GROUP))
-    except NotImplementedError:
-        print("homogeneity_attack: not implemented yet")
+    groups = Counter(generalize(row) for row in RELEASED)
+    print(f"Generalized release: {len(groups)} groups, smallest size {min(groups.values())}")
+    print(f"Constructed k={len(HOMOGENEOUS_GROUP)} group reveals "
+          f"{homogeneity_attack(HOMOGENEOUS_GROUP)!r}")
+    diverse_group = [
+        dict(row, diagnosis=diagnosis)
+        for row, diagnosis in zip(HOMOGENEOUS_GROUP, ("hiv", "flu", "none", "cancer", "diabetes"))
+    ]
+    print("Diverse group homogeneous disclosure:", homogeneity_attack(diverse_group))
 
-    try:
-        print(f"DP count of HIV (true = {TRUE_HIV_COUNT}):")
-        for eps in DP_EPSILONS:
-            r = random.Random(1)
-            errs = [abs(noisy_count(TRUE_HIV_COUNT, eps, r) - TRUE_HIV_COUNT)
-                    for _ in range(5000)]
-            print(f"  eps={eps:>4}  mean|error|={sum(errs)/len(errs):>6.2f}  (bound 1/eps = {1/eps})")
-    except NotImplementedError:
-        print("noisy_count: not implemented yet")
+    print(f"DP count of HIV (true = {TRUE_HIV_COUNT}):")
+    for eps in DP_EPSILONS:
+        rng = random.Random(1)
+        errors = [abs(noisy_count(TRUE_HIV_COUNT, eps, rng) - TRUE_HIV_COUNT)
+                  for _ in range(5000)]
+        print(f"  eps={eps:>4}  mean|error|={sum(errors)/len(errors):>6.2f}  "
+              f"(expected 1/eps = {1/eps})")
 
-    try:
-        mi = membership_inference(PROBE, MI_THRESHOLDS)
-        print(f"membership inference: {mi['accuracy']:.0%} accuracy "
-              f"(baseline 50%) at threshold {mi['best_threshold']}")
-    except NotImplementedError:
-        print("membership_inference: not implemented yet")
+    rng = random.Random(1)
+    query_count = 10
+    eps_per_query = 0.1
+    answers = [noisy_count(TRUE_HIV_COUNT, eps_per_query, rng) for _ in range(query_count)]
+    total_eps = query_count * eps_per_query
+    print(f"Ten releases at eps={eps_per_query} each: "
+          + ", ".join(f"{answer:.2f}" for answer in answers))
+    print(f"Composition: eps={eps_per_query} -> {total_eps:g}, "
+          f"likelihood factor {epsilon_guarantee(eps_per_query):.3f} "
+          f"-> {epsilon_guarantee(total_eps):.3f}")
+
+    mi = membership_inference(PROBE, MI_THRESHOLDS)
+    print(f"Membership inference: {mi['accuracy']:.1%} accuracy "
+          f"(baseline 50%) at threshold {mi['best_threshold']}")
