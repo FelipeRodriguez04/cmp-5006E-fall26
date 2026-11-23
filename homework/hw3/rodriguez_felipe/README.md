@@ -6,6 +6,8 @@
 
 **Target:** T1, the course's `vuln-llm`.
 
+[Part C — Where our red team might be unfair](honesty.md)
+
 ## Reproduction and scope
 
 From the repository root:
