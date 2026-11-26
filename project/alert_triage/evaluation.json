@@ -1,0 +1,2381 @@
+{
+  "timestamp_utc": "2026-11-25T17:33:20.323683+00:00",
+  "model": "qwen2.5:1.5b",
+  "temperature": 0.2,
+  "fixture_sha256": "c68632fd990e3a9eb344655004859172d7e95d199dcf65f633c4c47fafa04a7f",
+  "application_sha256": "90f8b8af714a91248eecfeedc1623fbf9990729420b7fd2a628e309b6aa70c81",
+  "summary": {
+    "comparison": {
+      "rules": {
+        "tp": 35,
+        "fp": 25,
+        "fn": 30,
+        "precision": 0.5833333333333334,
+        "recall": 0.5384615384615384,
+        "f1": 0.5599999999999999,
+        "false_positives": [
+          [
+            "analyst-review",
+            "e08/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e08/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e08/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e08/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e08/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e10/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e10/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e10/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e10/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e10/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e14/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e14/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e14/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e14/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e14/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e18/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e18/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e18/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e18/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e18/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e23/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e23/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e23/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e23/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e23/trial-5"
+          ]
+        ],
+        "missed": [
+          [
+            "analyst-review",
+            "e05/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e05/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e05/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e05/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e05/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e06/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e06/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e06/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e06/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e06/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e09/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e09/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e09/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e09/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e09/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e13/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e13/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e13/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e13/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e13/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e17/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e17/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e17/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e17/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e17/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e22/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e22/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e22/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e22/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e22/trial-5"
+          ]
+        ]
+      },
+      "model": {
+        "tp": 65,
+        "fp": 23,
+        "fn": 0,
+        "precision": 0.7386363636363636,
+        "recall": 1.0,
+        "f1": 0.8496732026143791,
+        "false_positives": [
+          [
+            "analyst-review",
+            "e07/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e07/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e07/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e07/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e07/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e18/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e19/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e19/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e19/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e19/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e19/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e21/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e21/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e21/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e21/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e21/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e23/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e23/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e24/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e24/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e24/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e24/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e24/trial-5"
+          ]
+        ],
+        "missed": []
+      },
+      "hybrid": {
+        "tp": 65,
+        "fp": 23,
+        "fn": 0,
+        "precision": 0.7386363636363636,
+        "recall": 1.0,
+        "f1": 0.8496732026143791,
+        "false_positives": [
+          [
+            "analyst-review",
+            "e07/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e07/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e07/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e07/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e07/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e18/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e19/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e19/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e19/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e19/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e19/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e21/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e21/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e21/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e21/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e21/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e23/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e23/trial-5"
+          ],
+          [
+            "analyst-review",
+            "e24/trial-1"
+          ],
+          [
+            "analyst-review",
+            "e24/trial-2"
+          ],
+          [
+            "analyst-review",
+            "e24/trial-3"
+          ],
+          [
+            "analyst-review",
+            "e24/trial-4"
+          ],
+          [
+            "analyst-review",
+            "e24/trial-5"
+          ]
+        ],
+        "missed": []
+      }
+    },
+    "invalid_model_outputs": 0,
+    "critical_trials": 20,
+    "critical_below_urgent": {
+      "rules": 0,
+      "model": 0,
+      "hybrid": 0
+    },
+    "median_rules_us": 1.1875,
+    "median_inference_ms": 157.9145625,
+    "median_policy_us": 2.375
+  },
+  "trials": [
+    {
+      "id": "E01",
+      "trial": 1,
+      "signal": "canary_access",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "Urgent",
+      "rules_ns": 709,
+      "inference_ns": 271638583,
+      "policy_ns": 6625
+    },
+    {
+      "id": "E02",
+      "trial": 1,
+      "signal": "confirmed_privileged_change",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 3417,
+      "inference_ns": 160268625,
+      "policy_ns": 2625
+    },
+    {
+      "id": "E03",
+      "trial": 1,
+      "signal": "canary_access",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 833,
+      "inference_ns": 161670584,
+      "policy_ns": 2375
+    },
+    {
+      "id": "E04",
+      "trial": 1,
+      "signal": "confirmed_privileged_change",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 3709,
+      "inference_ns": 184017541,
+      "policy_ns": 1750
+    },
+    {
+      "id": "E05",
+      "trial": 1,
+      "signal": "login_failures",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 4625,
+      "inference_ns": 225341500,
+      "policy_ns": 6792
+    },
+    {
+      "id": "E06",
+      "trial": 1,
+      "signal": "login_failures",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 4792,
+      "inference_ns": 246843375,
+      "policy_ns": 5375
+    },
+    {
+      "id": "E07",
+      "trial": 1,
+      "signal": "login_failures",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 917,
+      "inference_ns": 172067916,
+      "policy_ns": 1292
+    },
+    {
+      "id": "E08",
+      "trial": 1,
+      "signal": "login_failures",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 667,
+      "inference_ns": 163576958,
+      "policy_ns": 3000
+    },
+    {
+      "id": "E09",
+      "trial": 1,
+      "signal": "file_transfers",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1750,
+      "inference_ns": 165295167,
+      "policy_ns": 1500
+    },
+    {
+      "id": "E10",
+      "trial": 1,
+      "signal": "file_transfers",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 792,
+      "inference_ns": 165404875,
+      "policy_ns": 1916
+    },
+    {
+      "id": "E11",
+      "trial": 1,
+      "signal": "file_transfers",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 709,
+      "inference_ns": 158256792,
+      "policy_ns": 1667
+    },
+    {
+      "id": "E12",
+      "trial": 1,
+      "signal": "file_transfers",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "Urgent",
+      "rules_ns": 875,
+      "inference_ns": 178389458,
+      "policy_ns": 1791
+    },
+    {
+      "id": "E13",
+      "trial": 1,
+      "signal": "process_starts",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 834,
+      "inference_ns": 156742875,
+      "policy_ns": 1584
+    },
+    {
+      "id": "E14",
+      "trial": 1,
+      "signal": "process_starts",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1125,
+      "inference_ns": 153729791,
+      "policy_ns": 2375
+    },
+    {
+      "id": "E15",
+      "trial": 1,
+      "signal": "process_starts",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1416,
+      "inference_ns": 153014542,
+      "policy_ns": 1708
+    },
+    {
+      "id": "E16",
+      "trial": 1,
+      "signal": "process_starts",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 958,
+      "inference_ns": 154339583,
+      "policy_ns": 2625
+    },
+    {
+      "id": "E17",
+      "trial": 1,
+      "signal": "dns_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1375,
+      "inference_ns": 179015542,
+      "policy_ns": 1667
+    },
+    {
+      "id": "E18",
+      "trial": 1,
+      "signal": "dns_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 875,
+      "inference_ns": 154204250,
+      "policy_ns": 7417
+    },
+    {
+      "id": "E19",
+      "trial": 1,
+      "signal": "dns_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "review",
+        "hybrid": "review"
+      },
+      "mode": "model",
+      "raw_model_output": "review",
+      "rules_ns": 1292,
+      "inference_ns": 154058708,
+      "policy_ns": 2250
+    },
+    {
+      "id": "E20",
+      "trial": 1,
+      "signal": "dns_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "Urgent",
+      "rules_ns": 1209,
+      "inference_ns": 178322584,
+      "policy_ns": 2250
+    },
+    {
+      "id": "E21",
+      "trial": 1,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1292,
+      "inference_ns": 154882792,
+      "policy_ns": 1667
+    },
+    {
+      "id": "E22",
+      "trial": 1,
+      "signal": "configuration_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "Urgent",
+      "rules_ns": 1125,
+      "inference_ns": 178204083,
+      "policy_ns": 1291
+    },
+    {
+      "id": "E23",
+      "trial": 1,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 500,
+      "inference_ns": 155327167,
+      "policy_ns": 1541
+    },
+    {
+      "id": "E24",
+      "trial": 1,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 917,
+      "inference_ns": 153707583,
+      "policy_ns": 1708
+    },
+    {
+      "id": "E01",
+      "trial": 2,
+      "signal": "canary_access",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "Urgent",
+      "rules_ns": 1000,
+      "inference_ns": 203470208,
+      "policy_ns": 1292
+    },
+    {
+      "id": "E02",
+      "trial": 2,
+      "signal": "confirmed_privileged_change",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 708,
+      "inference_ns": 155296625,
+      "policy_ns": 2417
+    },
+    {
+      "id": "E03",
+      "trial": 2,
+      "signal": "canary_access",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 1167,
+      "inference_ns": 154428583,
+      "policy_ns": 1917
+    },
+    {
+      "id": "E04",
+      "trial": 2,
+      "signal": "confirmed_privileged_change",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 1000,
+      "inference_ns": 177904375,
+      "policy_ns": 2166
+    },
+    {
+      "id": "E05",
+      "trial": 2,
+      "signal": "login_failures",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1250,
+      "inference_ns": 155184375,
+      "policy_ns": 1750
+    },
+    {
+      "id": "E06",
+      "trial": 2,
+      "signal": "login_failures",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 833,
+      "inference_ns": 153742333,
+      "policy_ns": 2042
+    },
+    {
+      "id": "E07",
+      "trial": 2,
+      "signal": "login_failures",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "review",
+        "hybrid": "review"
+      },
+      "mode": "model",
+      "raw_model_output": "Review",
+      "rules_ns": 959,
+      "inference_ns": 153486875,
+      "policy_ns": 1458
+    },
+    {
+      "id": "E08",
+      "trial": 2,
+      "signal": "login_failures",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 625,
+      "inference_ns": 155846875,
+      "policy_ns": 2458
+    },
+    {
+      "id": "E09",
+      "trial": 2,
+      "signal": "file_transfers",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1333,
+      "inference_ns": 155513542,
+      "policy_ns": 2459
+    },
+    {
+      "id": "E10",
+      "trial": 2,
+      "signal": "file_transfers",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1333,
+      "inference_ns": 157276792,
+      "policy_ns": 2792
+    },
+    {
+      "id": "E11",
+      "trial": 2,
+      "signal": "file_transfers",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1125,
+      "inference_ns": 158234250,
+      "policy_ns": 2291
+    },
+    {
+      "id": "E12",
+      "trial": 2,
+      "signal": "file_transfers",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1209,
+      "inference_ns": 159773709,
+      "policy_ns": 1666
+    },
+    {
+      "id": "E13",
+      "trial": 2,
+      "signal": "process_starts",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "Urgent",
+      "rules_ns": 750,
+      "inference_ns": 212603291,
+      "policy_ns": 1542
+    },
+    {
+      "id": "E14",
+      "trial": 2,
+      "signal": "process_starts",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 542,
+      "inference_ns": 156975417,
+      "policy_ns": 1666
+    },
+    {
+      "id": "E15",
+      "trial": 2,
+      "signal": "process_starts",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 875,
+      "inference_ns": 161220583,
+      "policy_ns": 2459
+    },
+    {
+      "id": "E16",
+      "trial": 2,
+      "signal": "process_starts",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1209,
+      "inference_ns": 154586250,
+      "policy_ns": 1584
+    },
+    {
+      "id": "E17",
+      "trial": 2,
+      "signal": "dns_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1708,
+      "inference_ns": 183250250,
+      "policy_ns": 2792
+    },
+    {
+      "id": "E18",
+      "trial": 2,
+      "signal": "dns_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "review",
+        "hybrid": "review"
+      },
+      "mode": "model",
+      "raw_model_output": "review",
+      "rules_ns": 1291,
+      "inference_ns": 159986667,
+      "policy_ns": 2459
+    },
+    {
+      "id": "E19",
+      "trial": 2,
+      "signal": "dns_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "review",
+        "hybrid": "review"
+      },
+      "mode": "model",
+      "raw_model_output": "review",
+      "rules_ns": 1250,
+      "inference_ns": 155343042,
+      "policy_ns": 2584
+    },
+    {
+      "id": "E20",
+      "trial": 2,
+      "signal": "dns_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "Urgent",
+      "rules_ns": 1750,
+      "inference_ns": 179200250,
+      "policy_ns": 3042
+    },
+    {
+      "id": "E21",
+      "trial": 2,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1750,
+      "inference_ns": 155733959,
+      "policy_ns": 2792
+    },
+    {
+      "id": "E22",
+      "trial": 2,
+      "signal": "configuration_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1500,
+      "inference_ns": 156914416,
+      "policy_ns": 1750
+    },
+    {
+      "id": "E23",
+      "trial": 2,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "review",
+        "hybrid": "review"
+      },
+      "mode": "model",
+      "raw_model_output": "review",
+      "rules_ns": 1042,
+      "inference_ns": 155392875,
+      "policy_ns": 1584
+    },
+    {
+      "id": "E24",
+      "trial": 2,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1084,
+      "inference_ns": 153611791,
+      "policy_ns": 2417
+    },
+    {
+      "id": "E01",
+      "trial": 3,
+      "signal": "canary_access",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "Urgent",
+      "rules_ns": 1542,
+      "inference_ns": 206928083,
+      "policy_ns": 1750
+    },
+    {
+      "id": "E02",
+      "trial": 3,
+      "signal": "confirmed_privileged_change",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 1375,
+      "inference_ns": 173690542,
+      "policy_ns": 1625
+    },
+    {
+      "id": "E03",
+      "trial": 3,
+      "signal": "canary_access",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 625,
+      "inference_ns": 158058542,
+      "policy_ns": 1584
+    },
+    {
+      "id": "E04",
+      "trial": 3,
+      "signal": "confirmed_privileged_change",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 708,
+      "inference_ns": 198642667,
+      "policy_ns": 4625
+    },
+    {
+      "id": "E05",
+      "trial": 3,
+      "signal": "login_failures",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1125,
+      "inference_ns": 257216375,
+      "policy_ns": 4000
+    },
+    {
+      "id": "E06",
+      "trial": 3,
+      "signal": "login_failures",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1333,
+      "inference_ns": 187705625,
+      "policy_ns": 3875
+    },
+    {
+      "id": "E07",
+      "trial": 3,
+      "signal": "login_failures",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 2542,
+      "inference_ns": 174249000,
+      "policy_ns": 2375
+    },
+    {
+      "id": "E08",
+      "trial": 3,
+      "signal": "login_failures",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1458,
+      "inference_ns": 173934209,
+      "policy_ns": 1583
+    },
+    {
+      "id": "E09",
+      "trial": 3,
+      "signal": "file_transfers",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 917,
+      "inference_ns": 174220542,
+      "policy_ns": 3417
+    },
+    {
+      "id": "E10",
+      "trial": 3,
+      "signal": "file_transfers",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1667,
+      "inference_ns": 164540042,
+      "policy_ns": 1000
+    },
+    {
+      "id": "E11",
+      "trial": 3,
+      "signal": "file_transfers",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 542,
+      "inference_ns": 153998958,
+      "policy_ns": 2167
+    },
+    {
+      "id": "E12",
+      "trial": 3,
+      "signal": "file_transfers",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "Urgent",
+      "rules_ns": 1125,
+      "inference_ns": 178500333,
+      "policy_ns": 1416
+    },
+    {
+      "id": "E13",
+      "trial": 3,
+      "signal": "process_starts",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "Urgent",
+      "rules_ns": 625,
+      "inference_ns": 182501250,
+      "policy_ns": 2208
+    },
+    {
+      "id": "E14",
+      "trial": 3,
+      "signal": "process_starts",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1125,
+      "inference_ns": 154622083,
+      "policy_ns": 2375
+    },
+    {
+      "id": "E15",
+      "trial": 3,
+      "signal": "process_starts",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1667,
+      "inference_ns": 154498709,
+      "policy_ns": 1834
+    },
+    {
+      "id": "E16",
+      "trial": 3,
+      "signal": "process_starts",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1042,
+      "inference_ns": 153477000,
+      "policy_ns": 2792
+    },
+    {
+      "id": "E17",
+      "trial": 3,
+      "signal": "dns_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1417,
+      "inference_ns": 179057958,
+      "policy_ns": 2375
+    },
+    {
+      "id": "E18",
+      "trial": 3,
+      "signal": "dns_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1334,
+      "inference_ns": 156964750,
+      "policy_ns": 2416
+    },
+    {
+      "id": "E19",
+      "trial": 3,
+      "signal": "dns_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1250,
+      "inference_ns": 153135542,
+      "policy_ns": 2333
+    },
+    {
+      "id": "E20",
+      "trial": 3,
+      "signal": "dns_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "Urgent",
+      "rules_ns": 1292,
+      "inference_ns": 182957625,
+      "policy_ns": 1584
+    },
+    {
+      "id": "E21",
+      "trial": 3,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 750,
+      "inference_ns": 157422209,
+      "policy_ns": 916
+    },
+    {
+      "id": "E22",
+      "trial": 3,
+      "signal": "configuration_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 333,
+      "inference_ns": 158452125,
+      "policy_ns": 2417
+    },
+    {
+      "id": "E23",
+      "trial": 3,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1375,
+      "inference_ns": 158939375,
+      "policy_ns": 2875
+    },
+    {
+      "id": "E24",
+      "trial": 3,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1167,
+      "inference_ns": 155677458,
+      "policy_ns": 2375
+    },
+    {
+      "id": "E01",
+      "trial": 4,
+      "signal": "canary_access",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "Urgent",
+      "rules_ns": 10709,
+      "inference_ns": 204249375,
+      "policy_ns": 2291
+    },
+    {
+      "id": "E02",
+      "trial": 4,
+      "signal": "confirmed_privileged_change",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 11458,
+      "inference_ns": 155564333,
+      "policy_ns": 2375
+    },
+    {
+      "id": "E03",
+      "trial": 4,
+      "signal": "canary_access",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 1208,
+      "inference_ns": 155652292,
+      "policy_ns": 2625
+    },
+    {
+      "id": "E04",
+      "trial": 4,
+      "signal": "confirmed_privileged_change",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 38125,
+      "inference_ns": 178682083,
+      "policy_ns": 2625
+    },
+    {
+      "id": "E05",
+      "trial": 4,
+      "signal": "login_failures",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1333,
+      "inference_ns": 172189750,
+      "policy_ns": 2667
+    },
+    {
+      "id": "E06",
+      "trial": 4,
+      "signal": "login_failures",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1375,
+      "inference_ns": 168996042,
+      "policy_ns": 2542
+    },
+    {
+      "id": "E07",
+      "trial": 4,
+      "signal": "login_failures",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1500,
+      "inference_ns": 156919750,
+      "policy_ns": 2000
+    },
+    {
+      "id": "E08",
+      "trial": 4,
+      "signal": "login_failures",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1125,
+      "inference_ns": 154713917,
+      "policy_ns": 2708
+    },
+    {
+      "id": "E09",
+      "trial": 4,
+      "signal": "file_transfers",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1375,
+      "inference_ns": 154693791,
+      "policy_ns": 1750
+    },
+    {
+      "id": "E10",
+      "trial": 4,
+      "signal": "file_transfers",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 917,
+      "inference_ns": 155651750,
+      "policy_ns": 2375
+    },
+    {
+      "id": "E11",
+      "trial": 4,
+      "signal": "file_transfers",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1292,
+      "inference_ns": 155263125,
+      "policy_ns": 2541
+    },
+    {
+      "id": "E12",
+      "trial": 4,
+      "signal": "file_transfers",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "Urgent",
+      "rules_ns": 1459,
+      "inference_ns": 178939834,
+      "policy_ns": 1417
+    },
+    {
+      "id": "E13",
+      "trial": 4,
+      "signal": "process_starts",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 541,
+      "inference_ns": 156289375,
+      "policy_ns": 2666
+    },
+    {
+      "id": "E14",
+      "trial": 4,
+      "signal": "process_starts",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1250,
+      "inference_ns": 171746667,
+      "policy_ns": 2417
+    },
+    {
+      "id": "E15",
+      "trial": 4,
+      "signal": "process_starts",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1459,
+      "inference_ns": 157939083,
+      "policy_ns": 2583
+    },
+    {
+      "id": "E16",
+      "trial": 4,
+      "signal": "process_starts",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1666,
+      "inference_ns": 155031750,
+      "policy_ns": 1917
+    },
+    {
+      "id": "E17",
+      "trial": 4,
+      "signal": "dns_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 666,
+      "inference_ns": 180262458,
+      "policy_ns": 1875
+    },
+    {
+      "id": "E18",
+      "trial": 4,
+      "signal": "dns_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 958,
+      "inference_ns": 155218917,
+      "policy_ns": 2708
+    },
+    {
+      "id": "E19",
+      "trial": 4,
+      "signal": "dns_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1125,
+      "inference_ns": 155322084,
+      "policy_ns": 2500
+    },
+    {
+      "id": "E20",
+      "trial": 4,
+      "signal": "dns_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1250,
+      "inference_ns": 157050375,
+      "policy_ns": 1750
+    },
+    {
+      "id": "E21",
+      "trial": 4,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 875,
+      "inference_ns": 155762750,
+      "policy_ns": 1875
+    },
+    {
+      "id": "E22",
+      "trial": 4,
+      "signal": "configuration_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1167,
+      "inference_ns": 156566417,
+      "policy_ns": 2542
+    },
+    {
+      "id": "E23",
+      "trial": 4,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1583,
+      "inference_ns": 169813458,
+      "policy_ns": 2458
+    },
+    {
+      "id": "E24",
+      "trial": 4,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1291,
+      "inference_ns": 157890042,
+      "policy_ns": 5250
+    },
+    {
+      "id": "E01",
+      "trial": 5,
+      "signal": "canary_access",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "Urgent",
+      "rules_ns": 1333,
+      "inference_ns": 203586583,
+      "policy_ns": 2750
+    },
+    {
+      "id": "E02",
+      "trial": 5,
+      "signal": "confirmed_privileged_change",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 1750,
+      "inference_ns": 155647875,
+      "policy_ns": 2500
+    },
+    {
+      "id": "E03",
+      "trial": 5,
+      "signal": "canary_access",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 1500,
+      "inference_ns": 154849375,
+      "policy_ns": 5208
+    },
+    {
+      "id": "E04",
+      "trial": 5,
+      "signal": "confirmed_privileged_change",
+      "expected_review": true,
+      "labels": {
+        "rules": "urgent",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "sensor_floor",
+      "raw_model_output": "urgent",
+      "rules_ns": 1125,
+      "inference_ns": 179366250,
+      "policy_ns": 2542
+    },
+    {
+      "id": "E05",
+      "trial": 5,
+      "signal": "login_failures",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1292,
+      "inference_ns": 154451791,
+      "policy_ns": 2750
+    },
+    {
+      "id": "E06",
+      "trial": 5,
+      "signal": "login_failures",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1542,
+      "inference_ns": 163018333,
+      "policy_ns": 3958
+    },
+    {
+      "id": "E07",
+      "trial": 5,
+      "signal": "login_failures",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 750,
+      "inference_ns": 194004959,
+      "policy_ns": 1667
+    },
+    {
+      "id": "E08",
+      "trial": 5,
+      "signal": "login_failures",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 875,
+      "inference_ns": 156068000,
+      "policy_ns": 2625
+    },
+    {
+      "id": "E09",
+      "trial": 5,
+      "signal": "file_transfers",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1167,
+      "inference_ns": 154317792,
+      "policy_ns": 2833
+    },
+    {
+      "id": "E10",
+      "trial": 5,
+      "signal": "file_transfers",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1500,
+      "inference_ns": 166883084,
+      "policy_ns": 2459
+    },
+    {
+      "id": "E11",
+      "trial": 5,
+      "signal": "file_transfers",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1208,
+      "inference_ns": 156485334,
+      "policy_ns": 2334
+    },
+    {
+      "id": "E12",
+      "trial": 5,
+      "signal": "file_transfers",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1166,
+      "inference_ns": 154647208,
+      "policy_ns": 2667
+    },
+    {
+      "id": "E13",
+      "trial": 5,
+      "signal": "process_starts",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1250,
+      "inference_ns": 153936917,
+      "policy_ns": 2500
+    },
+    {
+      "id": "E14",
+      "trial": 5,
+      "signal": "process_starts",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1291,
+      "inference_ns": 155397834,
+      "policy_ns": 2250
+    },
+    {
+      "id": "E15",
+      "trial": 5,
+      "signal": "process_starts",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 1166,
+      "inference_ns": 153584875,
+      "policy_ns": 2666
+    },
+    {
+      "id": "E16",
+      "trial": 5,
+      "signal": "process_starts",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 1334,
+      "inference_ns": 175833875,
+      "policy_ns": 1709
+    },
+    {
+      "id": "E17",
+      "trial": 5,
+      "signal": "dns_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "Urgent",
+      "rules_ns": 708,
+      "inference_ns": 204936917,
+      "policy_ns": 1375
+    },
+    {
+      "id": "E18",
+      "trial": 5,
+      "signal": "dns_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "routine",
+        "hybrid": "routine"
+      },
+      "mode": "model",
+      "raw_model_output": "routine",
+      "rules_ns": 833,
+      "inference_ns": 158243875,
+      "policy_ns": 1000
+    },
+    {
+      "id": "E19",
+      "trial": 5,
+      "signal": "dns_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 416,
+      "inference_ns": 154782958,
+      "policy_ns": 2542
+    },
+    {
+      "id": "E20",
+      "trial": 5,
+      "signal": "dns_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "review",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "Urgent",
+      "rules_ns": 1209,
+      "inference_ns": 180067458,
+      "policy_ns": 2000
+    },
+    {
+      "id": "E21",
+      "trial": 5,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 875,
+      "inference_ns": 155599792,
+      "policy_ns": 2292
+    },
+    {
+      "id": "E22",
+      "trial": 5,
+      "signal": "configuration_events",
+      "expected_review": true,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "Urgent",
+      "rules_ns": 1125,
+      "inference_ns": 183177958,
+      "policy_ns": 1709
+    },
+    {
+      "id": "E23",
+      "trial": 5,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "review",
+        "model": "review",
+        "hybrid": "review"
+      },
+      "mode": "model",
+      "raw_model_output": "review",
+      "rules_ns": 834,
+      "inference_ns": 156469667,
+      "policy_ns": 1541
+    },
+    {
+      "id": "E24",
+      "trial": 5,
+      "signal": "configuration_events",
+      "expected_review": false,
+      "labels": {
+        "rules": "routine",
+        "model": "urgent",
+        "hybrid": "urgent"
+      },
+      "mode": "model",
+      "raw_model_output": "urgent",
+      "rules_ns": 792,
+      "inference_ns": 163058667,
+      "policy_ns": 1458
+    }
+  ]
+}

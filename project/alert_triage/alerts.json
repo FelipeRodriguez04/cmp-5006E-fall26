@@ -1,0 +1,180 @@
+[
+  {
+    "id": "E01",
+    "signal": "canary_access",
+    "count": 1,
+    "note": "A confirmed read was recorded on a decoy file with no legitimate users.",
+    "expected_review": true
+  },
+  {
+    "id": "E02",
+    "signal": "confirmed_privileged_change",
+    "count": 1,
+    "note": "The verified change was outside the approved maintenance record.",
+    "expected_review": true
+  },
+  {
+    "id": "E03",
+    "signal": "canary_access",
+    "count": 2,
+    "note": "The remediation note reports that the access has stopped.",
+    "expected_review": true
+  },
+  {
+    "id": "E04",
+    "signal": "confirmed_privileged_change",
+    "count": 2,
+    "note": "The account owner asks to check whether a scheduled change explains this.",
+    "expected_review": true
+  },
+  {
+    "id": "E05",
+    "signal": "login_failures",
+    "count": 3,
+    "note": "Three employees received MFA challenges they did not initiate.",
+    "expected_review": true,
+    "sensor_review": true,
+    "sensor_review_reason": "Identity sensor verified MFA challenges that employees did not initiate."
+  },
+  {
+    "id": "E06",
+    "signal": "login_failures",
+    "count": 4,
+    "note": "Failures involved distinct dormant accounts from one unfamiliar source.",
+    "expected_review": true
+  },
+  {
+    "id": "E07",
+    "signal": "login_failures",
+    "count": 2,
+    "note": "One account failed twice and then logged in from its usual workstation.",
+    "expected_review": false
+  },
+  {
+    "id": "E08",
+    "signal": "login_failures",
+    "count": 22,
+    "note": "A documented training exercise used dummy accounts on the classroom network.",
+    "expected_review": false
+  },
+  {
+    "id": "E09",
+    "signal": "file_transfers",
+    "count": 3,
+    "note": "A recently disabled account copied finance archives to an unfamiliar destination.",
+    "expected_review": true,
+    "sensor_review": true,
+    "sensor_review_reason": "Identity and transfer sensors correlated an archive copy with a disabled account."
+  },
+  {
+    "id": "E10",
+    "signal": "file_transfers",
+    "count": 16,
+    "note": "Nightly backup matched the approved source, destination, and maintenance window.",
+    "expected_review": false
+  },
+  {
+    "id": "E11",
+    "signal": "file_transfers",
+    "count": 2,
+    "note": "A workstation moved two reports to its usual internal reporting share.",
+    "expected_review": false
+  },
+  {
+    "id": "E12",
+    "signal": "file_transfers",
+    "count": 12,
+    "note": "A new third-party destination received payroll drafts without an approved request.",
+    "expected_review": true
+  },
+  {
+    "id": "E13",
+    "signal": "process_starts",
+    "count": 1,
+    "note": "A service account launched an unexpected unsigned binary from a temporary folder.",
+    "expected_review": true,
+    "sensor_review": true,
+    "sensor_review_reason": "Process sensor verified an unsigned executable running from a temporary directory."
+  },
+  {
+    "id": "E14",
+    "signal": "process_starts",
+    "count": 31,
+    "note": "Monitoring verified the approved integration test and its signed test binary.",
+    "expected_review": false
+  },
+  {
+    "id": "E15",
+    "signal": "process_starts",
+    "count": 7,
+    "note": "The signed updater restarted the expected service after maintenance.",
+    "expected_review": false
+  },
+  {
+    "id": "E16",
+    "signal": "process_starts",
+    "count": 18,
+    "note": "Hosts outside the rollout group are launching the same unfamiliar process.",
+    "expected_review": true
+  },
+  {
+    "id": "E17",
+    "signal": "dns_events",
+    "count": 3,
+    "note": "An endpoint contacted a domain flagged in the team's synthetic incident inventory.",
+    "expected_review": true,
+    "sensor_review": true,
+    "sensor_review_reason": "DNS sensor matched a domain in the local incident inventory."
+  },
+  {
+    "id": "E18",
+    "signal": "dns_events",
+    "count": 25,
+    "note": "A lab health check resolved the approved internal domain repeatedly.",
+    "expected_review": false
+  },
+  {
+    "id": "E19",
+    "signal": "dns_events",
+    "count": 8,
+    "note": "The requests came from the standard internal service discovery agent.",
+    "expected_review": false
+  },
+  {
+    "id": "E20",
+    "signal": "dns_events",
+    "count": 13,
+    "note": "A set of workstations repeatedly resolved newly seen lookalike domains.",
+    "expected_review": true
+  },
+  {
+    "id": "E21",
+    "signal": "configuration_events",
+    "count": 2,
+    "note": "The approved change record covers both firewall updates.",
+    "expected_review": false
+  },
+  {
+    "id": "E22",
+    "signal": "configuration_events",
+    "count": 1,
+    "note": "Remote administration was enabled on an exposed test host outside its change window.",
+    "expected_review": true,
+    "sensor_review": true,
+    "sensor_review_reason": "Configuration sensor verified remote administration outside the approved change window."
+  },
+  {
+    "id": "E23",
+    "signal": "configuration_events",
+    "count": 11,
+    "note": "The changes were generated during a scheduled synthetic load test.",
+    "expected_review": false
+  },
+  {
+    "id": "E24",
+    "signal": "configuration_events",
+    "count": 4,
+    "note": "The sensor captured read-only configuration checks from the inventory service.",
+    "expected_review": false
+  }
+]

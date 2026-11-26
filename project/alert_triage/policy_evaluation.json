@@ -1,0 +1,4212 @@
+{
+  "timestamp_utc": "2026-11-25T22:01:44.687812+00:00",
+  "method": "HTTP with fixed model response stub; no prompts sent to Ollama",
+  "application_sha256": "790f13442513bb091197d59baddd534a2c888e2f736c6dafc514860bb37561d0",
+  "fixture_sha256": "33c60a725f76d305bf7fa7d406b20ec0669ccfd42b37b5f2a207023468142a46",
+  "distinct_model_outputs": 20,
+  "repeats_per_output_and_alert": 5,
+  "http_checks": 300,
+  "passed": 300,
+  "checks": [
+    {
+      "model_output": "routine",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "urgent",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "ROUTINE",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "Review",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "Urgent",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": "routine"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " routine ",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "routine",
+        "mode": "model",
+        "model_priority": "routine"
+      },
+      "expected_priority": "routine",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "review"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\nreview\n",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "model",
+        "model_priority": "review"
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\turgent\r\n",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "urgent",
+        "mode": "model",
+        "model_priority": "urgent"
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": " ",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "unknown",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "normal",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine.",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "\"review\"",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "{\"priority\":\"urgent\"}",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine, review",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "review\nurgent",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "routine\u200b",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 1,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 1,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 1,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 2,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 2,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 2,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 3,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 3,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 3,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 4,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 4,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 4,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 5,
+      "id": "E01",
+      "status": 200,
+      "response": {
+        "id": "E01",
+        "priority": "urgent",
+        "mode": "sensor_floor",
+        "model_priority": null
+      },
+      "expected_priority": "urgent",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 5,
+      "id": "E05",
+      "status": 200,
+      "response": {
+        "id": "E05",
+        "priority": "review",
+        "mode": "sensor_review_floor",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    },
+    {
+      "model_output": "needs review",
+      "trial": 5,
+      "id": "E07",
+      "status": 200,
+      "response": {
+        "id": "E07",
+        "priority": "review",
+        "mode": "manual_fallback",
+        "model_priority": null
+      },
+      "expected_priority": "review",
+      "passed": true
+    }
+  ]
+}
