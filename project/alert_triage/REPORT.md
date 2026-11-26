@@ -117,8 +117,7 @@ it through a note. To reproduce the paired evaluation, run
 ## Defensive HTTP Contract Checks
 
 The course rubric asks for attack inputs, an oracle, and repeatability. It
-also asks for a bypass attempt and the cost in false positives. The previous
-submission's feedback specified 20 payloads and five repetitions.
+also asks for a bypass attempt and the cost in false positives.
 [Course rubric](../capstone.md)
 
 The HTTP matrix passed **300 of 300 checks**. It used 20 distinct synthetic
